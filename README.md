@@ -50,8 +50,8 @@ Start the application:
     
 Update as environment variables from .env file
     
-    APP_NAME=EspecializaTi
-    APP_URL=http://localhost:8180
+    APP_NAME=ApiCrypto
+    APP_URL=http://localhost:8000
 
     DB_CONNECTION=mysql
     DB_HOST=mysql
@@ -60,9 +60,14 @@ Update as environment variables from .env file
     DB_USERNAME=root
     DB_PASSWORD=root
 
-    CACHE_DRIVER=redis
-    QUEUE_CONNECTION=redis
-    SESSION_DRIVER=redis
+    BROADCAST_DRIVER=log
+    CACHE_DRIVER=file
+    FILESYSTEM_DISK=local
+    QUEUE_CONNECTION=sync
+    SESSION_DRIVER=file
+    SESSION_LIFETIME=120
+
+    MEMCACHED_HOST=memcached
 
     REDIS_HOST=redis
     REDIS_PASSWORD=null
