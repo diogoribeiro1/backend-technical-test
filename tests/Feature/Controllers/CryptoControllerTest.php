@@ -44,21 +44,21 @@ class CryptoControllerTest extends TestCase
         $response->assertJson(['message' => 'Coin Not Found']);
     }
 
-    public function testGetABitcoinsPriceByDate()
+    public function testGetAPriceByDate()
     {
         $response = $this->get('/api/bitcoin/search/11-02-2020');
         $response->assertStatus(200);
         $response->assertJson(['coin' => 'bitcoin']);
     }
 
-    public function testGetABitcoinsPriceByWrongDate()
+    public function testGetAPriceByWrongDate()
     {
         $response = $this->get('/api/bitcoin/search/11-02-1900');
         $response->assertStatus(400);
         $response->assertJson(['message' => 'Solicitação incorreta']);
     }
 
-    public function testGetAWrongNamesPriceByDate()
+    public function testGetAPriceByDateAndWrongCryptocurrency()
     {
         $response = $this->get('/api/wrongName/search/11-02-2020');
         $response->assertStatus(400);
