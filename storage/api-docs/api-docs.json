@@ -1,0 +1,108 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Backend Technical Test",
+        "description": "Api that returns estimated cryptocurrency prices",
+        "contact": {
+            "email": "diogoribeiro698@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/{coin}": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "Get price by currency name",
+                "description": "Returns a price ",
+                "operationId": "getRecentPrice",
+                "parameters": [
+                    {
+                        "name": "coin",
+                        "in": "path",
+                        "description": "The name of the cryptocurrency eg. bitcoin, ethereum, dacxi, cosmos and terra-luna ",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        },
+        "/api/{coin}/search/{date}": {
+            "get": {
+                "tags": [
+                    "Projects"
+                ],
+                "summary": "Get price by date and currency name",
+                "description": "Returns project data",
+                "operationId": "getPriceByDate",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "path",
+                        "description": "The date of data snapshot in dd-mm-yyyy eg. 30-12-2017",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "coin",
+                        "in": "path",
+                        "description": "The name of the cryptocurrency eg. bitcoin, ethereum, dacxi, cosmos and terra-luna",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Unauthenticated"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Projects",
+            "description": "API Endpoints of Projects"
+        }
+    ]
+}
