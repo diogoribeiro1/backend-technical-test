@@ -26,7 +26,6 @@ class CryptoService
     {
         $coin = strtolower($coin);
         $coinsValidate = array('bitcoin', 'ethereum', 'dacxi', 'cosmos', 'terra-luna');
-
         if (!in_array($coin, $coinsValidate)) {
             return response()
                 ->json(['message' => 'Coin Not Found'], 400);
@@ -58,7 +57,6 @@ class CryptoService
     {
         $coin = strtolower($coin);
         $coinsValidate = array('bitcoin', 'ethereum', 'dacxi', 'cosmos', 'terra-luna');
-
         if (!in_array($coin, $coinsValidate)) {
             return response()
                 ->json(['message' => 'Coin Not Found'], 400);
@@ -73,7 +71,7 @@ class CryptoService
             $arrayResult = [
                 'coin' => $coin,
                 'price' => '$ '.$price[$coin]['usd'],
-                'date' => Carbon::now()->format('d-M-y')
+                'date' => $date
             ];
             $result = $this->repository->create($arrayResult);
         }

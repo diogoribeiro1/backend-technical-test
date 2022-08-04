@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
-use App\Repository\api\CryptoRepository;
 use App\Service\api\CryptoService;
 use Carbon\Carbon;
 

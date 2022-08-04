@@ -25,7 +25,7 @@ use Illuminate\Routing\Controller as BaseController;
  *
  * @OA\Tag(
  *     name="Projects",
- *     description="API Endpoints of Projects"
+ *     description="API Endpoints of Crypto"
  * )
  */
 class Controller extends BaseController

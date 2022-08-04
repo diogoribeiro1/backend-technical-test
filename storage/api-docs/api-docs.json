@@ -18,8 +18,8 @@
                 "tags": [
                     "Projects"
                 ],
-                "summary": "Get price by currency name",
-                "description": "Returns a price ",
+                "summary": "Get price(in dollar) by Cryptocurrency name",
+                "description": "Returns a price(in dollar)",
                 "operationId": "getRecentPrice",
                 "parameters": [
                     {
@@ -56,8 +56,8 @@
                 "tags": [
                     "Projects"
                 ],
-                "summary": "Get price by date and currency name",
-                "description": "Returns project data",
+                "summary": "Get price(in dollar) by date and Cryptocurrency name",
+                "description": "Returns a price(in dollar)",
                 "operationId": "getPriceByDate",
                 "parameters": [
                     {
@@ -102,7 +102,7 @@
     "tags": [
         {
             "name": "Projects",
-            "description": "API Endpoints of Projects"
+            "description": "API Endpoints of Crypto"
         }
     ]
 }
