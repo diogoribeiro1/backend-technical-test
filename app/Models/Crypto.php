@@ -9,7 +9,7 @@ class Crypto extends Model
 {
     use HasFactory;
 
-//    protected $table = 'cryptos';
+    protected $table = 'cryptos';
 
     public $timestamps = false;
 
