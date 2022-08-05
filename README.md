@@ -1,8 +1,14 @@
 # API Crypto
 
+A api foi desenvolvida em Laravel, seguindo todos os requisitos do teste, usei os princípios do clean code e do solid. A api tem dois endpoints, um endponit que retorna o preço mais recente de uma criptomoeda, esse endpoint tem como parametro o nome da criptomoeda, aceitando apenas Bitcoin, Dacxi, Ethereum, Cosmos,
+Terra-luna. O outro endpoint tem como parametro o nome da criptomoeda e a data que retorna o preço estimado da criptomoeda naquela data. Realizei testes unitários com PHPUnit e usei o laravel sail, que é uma interface de linha de comando leve para interagir com o ambiente de desenvolvimento Docker padrão do Laravel.
+
+The api was developed in Laravel, following all the test requirements, I used the principles of clean code and solid. The api has two endpoints, an endponit that returns the most recent price of a cryptocurrency, this endpoint has the name of the cryptocurrency as a parameter, accepting only Bitcoin, Dacxi, Ethereum, Cosmos,
+Earth-moon. The other endpoint has as a parameter the name of the cryptocurrency and the date that returns the estimated price of the cryptocurrency on that date. I did unit tests with PHPUnit and used laravel sail, which is a lightweight command line interface for interacting with Laravel's standard Docker development environment.
+
 # API Endpoints
 
-|   Endpoints   |  Paramaters  |    Verb    |
+|   Endpoints   |  Parameters  |    Verb    |
 | :---         |     :---:      |          ---: |
 | api/{coin}   | coin     | GET    |
 | api/{coin)/search/{date}     | coin and date       | GET    |
