@@ -93,4 +93,4 @@ Run the migrations:
 
 Enjoy!
 
-http://localhost:80/
+http://localhost:8000/api/bitcoin
